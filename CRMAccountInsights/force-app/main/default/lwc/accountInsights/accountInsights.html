@@ -1,0 +1,62 @@
+<template>
+  <lightning-card title = "Insights" class = "account-insight-tile" icon-name="custom:custom14">
+      <lightning-layout multiple-rows="true" pull-to-boundary="small" horizontal-align="center" vertical-align="center">
+          <lightning-layout-item padding = "around-small">
+              <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                  <div class = "slds-text-align_center account-tile-body">
+                      <div class = "slds-grid_vertical-align-center">
+                          <div class = "account-icon">
+                              <lightning-icon icon-name="custom:custom11" size="large" class="rating-icon"></lightning-icon>
+                          </div>
+                          <div class = "slds-m-around_medium">
+                              <p class = "ratingTitle">고객 등급</p>
+                              <p class = "ratingName">{rating}</p>
+                          </div>
+                      </div>
+                  </div>
+              </lightning-card>
+          </lightning-layout-item>
+          <lightning-layout-item padding = "around-small">
+            <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                <div class = "slds-text-align_center account-tile-body">
+                    <div class = "slds-grid_vertical-align-center">
+                        <div class = "snp-icon">
+                            <img src={snpIcon} alt="snp-icon" height="50px" width="50px"></img>
+                        </div>
+                        <div class = "slds-m-around_medium">
+                            <p class = "ratingTitle">신용 등급</p>
+                            <p class = "ratingName">{credit}</p>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+          <lightning-layout-item padding = "around-small">
+              <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                  <div class = "slds-text-align_center account-tile-body">
+                      <div class = "slds-grid_vertical-align-center">
+                          <lightning-icon icon-name="custom:custom17" size="large" class="amount-icon"></lightning-icon>
+                              <div class = "slds-m-around_medium">
+                                  <p class = "totalAmount">총 구매 금액</p>
+                                  <p class = "totlaAmount-price">{totalAmount}원</p>
+                              </div>
+                      </div>
+                  </div>
+              </lightning-card>
+          </lightning-layout-item>
+          <lightning-layout-item padding = "around-small">
+              <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                      <div class = "slds-text-align_center account-tile-body">
+                          <div class = "slds-grid_vertical-align-center">
+                              <lightning-icon icon-name="standard:case" size="large" class="case-icon"></lightning-icon>
+                                  <div class = "slds-m-around_medium">
+                                      <p class = "totalCase">문의 수</p>
+                                      <p class = "totalCase-Number">{totalCase}건</p>
+                                  </div>
+                          </div>
+                      </div>
+              </lightning-card>
+          </lightning-layout-item>
+      </lightning-layout>
+  </lightning-card>
+</template>
