@@ -10,7 +10,7 @@ public with sharing class AccountCaseController {
         Integer ongoingCaseCount = [SELECT COUNT()
                                     FROM Case
                                     WHERE AccountId = :accountId
-                                    AND Status NOT IN ('Closed')];
+                                    AND Status NOT IN ('Closed', 'Escalated')];
         
         return ongoingCaseCount;
     }

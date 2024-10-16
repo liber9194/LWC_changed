@@ -6,7 +6,7 @@
                   <div class = "slds-text-align_center account-tile-body">
                       <div class = "slds-grid_vertical-align-center">
                           <div class = "account-icon">
-                              <lightning-icon icon-name="custom:custom11" size="large" class="rating-icon"></lightning-icon>
+                            <img src={accountIcon} alt="account-icon" height="50px" width="50px"></img>
                           </div>
                           <div class = "slds-m-around_medium">
                               <p class = "ratingTitle">고객 등급</p>
@@ -48,15 +48,41 @@
               <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
                       <div class = "slds-text-align_center account-tile-body">
                           <div class = "slds-grid_vertical-align-center">
-                              <lightning-icon icon-name="standard:case" size="large" class="case-icon"></lightning-icon>
+                              <lightning-icon icon-name="standard:case_wrap_up" size="large" class="case-icon"></lightning-icon>
                                   <div class = "slds-m-around_medium">
-                                      <p class = "totalCase">문의 수</p>
+                                      <p class = "totalCase">진행 중인 문의 수</p>
                                       <p class = "totalCase-Number">{totalCase}건</p>
                                   </div>
                           </div>
                       </div>
               </lightning-card>
           </lightning-layout-item>
+          <lightning-layout-item padding = "around-small">
+            <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                    <div class = "slds-text-align_center account-tile-body">
+                        <div class = "slds-grid_vertical-align-center">
+                            <lightning-icon icon-name="standard:case_change_status" size="large" class="case-icon"></lightning-icon>
+                                <div class = "slds-m-around_medium">
+                                    <p class = "totalEscalCase">긴급처리 문의 수</p>
+                                    <p class = "totalEscalCase-Number">{totalEscalationCase}건</p>
+                                </div>
+                        </div>
+                    </div>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item padding = "around-small">
+            <lightning-card class = "slds-flex slds-align_absolute-center slds-justify_center account-tile">
+                    <div class = "slds-text-align_center account-tile-body">
+                        <div class = "slds-grid_vertical-align-center">
+                            <lightning-icon icon-name="standard:case" size="large" class="case-icon"></lightning-icon>
+                                <div class = "slds-m-around_medium">
+                                    <p class = "totalAllCase">누적 문의 수</p>
+                                    <p class = "totalAllCase-Number">{totalAllCase}건</p>
+                                </div>
+                        </div>
+                    </div>
+            </lightning-card>
+        </lightning-layout-item>
       </lightning-layout>
   </lightning-card>
 </template>
